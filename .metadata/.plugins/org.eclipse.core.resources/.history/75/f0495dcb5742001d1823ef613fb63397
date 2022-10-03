@@ -1,0 +1,4 @@
+insert into tb_worker (nome, salario) values ('Fernando', 3850.00);
+insert into tb_worker (nome, salario) values ('Solange', 1234.00);
+insert into tb_worker (nome, salario) values ('Giovana', 4321.00);
+insert into tb_worker (nome, salario) values ('Theo', 3521.12);

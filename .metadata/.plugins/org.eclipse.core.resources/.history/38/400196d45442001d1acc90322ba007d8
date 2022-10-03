@@ -1,0 +1,9 @@
+package com.microServices.Repositorio;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.microServices.Entity.Worker;
+
+public interface Repository extends JpaRepository<Worker, Long> {
+
+}

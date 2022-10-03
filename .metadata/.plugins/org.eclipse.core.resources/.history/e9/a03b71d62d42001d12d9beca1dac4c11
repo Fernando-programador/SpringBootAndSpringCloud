@@ -1,0 +1,5 @@
+package com.microServices.hrWorker;
+
+public class Worker {
+
+}

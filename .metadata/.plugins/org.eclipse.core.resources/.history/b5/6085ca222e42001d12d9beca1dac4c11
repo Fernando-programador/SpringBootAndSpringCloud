@@ -1,0 +1,5 @@
+package com.microServices.Entity;
+
+public class Worker {
+
+}
