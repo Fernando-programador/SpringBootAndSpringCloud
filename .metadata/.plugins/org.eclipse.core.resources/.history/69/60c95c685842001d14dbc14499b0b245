@@ -1,7 +1,0 @@
-usar somente as dependencias
-
-
-spring web -> conexão com a web
-spring jpa -> conexão com persistencia
-spring h2 -> banco de dados
-spring
