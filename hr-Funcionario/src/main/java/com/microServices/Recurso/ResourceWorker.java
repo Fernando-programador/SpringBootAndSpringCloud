@@ -2,7 +2,10 @@ package com.microServices.Recurso;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,6 +21,14 @@ import com.microServices.Entity.Repositorio.RepositoryWorker;
 @RequestMapping(value = "/service")
 public class ResourceWorker {
 	
+	private static Logger logger = LoggerFactory.getLogger(ResourceWorker.class);
+	@Autowired
+	private Environment env;
+	
+	
+	
+	
+	
 	@Autowired
 	private RepositoryWorker repository;
 	
@@ -29,6 +40,9 @@ public class ResourceWorker {
 	
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<Worker> findByid(@PathVariable Long id) {
+		
+		logger.info("PORT = " + env.getProperty(" local.server.port"));
+		
 		Worker obj = repository.findById(id).get();
 		return ResponseEntity.ok(obj);
 	}

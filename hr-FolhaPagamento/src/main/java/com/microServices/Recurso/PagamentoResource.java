@@ -1,5 +1,6 @@
 package com.microServices.Recurso;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,16 +12,16 @@ import com.microServices.Entities.Pagamento;
 import com.microServices.Servico.PagamentoService;
 
 @RestController
-@RequestMapping(value = "/pagamento")
+@RequestMapping(value = "/service")
 public class PagamentoResource {
 
 	@Autowired
 	private PagamentoService service;
-	
-@GetMapping(value = "{workerId}/dia/{dia}")
-public ResponseEntity<Pagamento> getPagamento(@PathVariable Long workerId, @PathVariable Integer dia){
-	Pagamento pagamento = service.getPagamento(	workerId, dia);
-	
-	return ResponseEntity.ok(pagamento);
-}
+
+	@GetMapping(value = "/{workerId}/dia/{dia}")
+	public ResponseEntity<Pagamento> getPagamento(@PathVariable Long workerId, @PathVariable Integer dia) {
+		Pagamento pagamento = service.getPagamento(workerId, dia);
+
+		return ResponseEntity.ok(pagamento);
+	}
 }

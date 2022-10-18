@@ -8,6 +8,7 @@
 		<version>2.7.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>com.micro</groupId>
 	<artifactId>hr-FolhaPagamento</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -41,6 +42,10 @@
 </dependency>
 
 
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-loadbalancer</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
