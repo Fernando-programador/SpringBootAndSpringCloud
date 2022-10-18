@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tb_worker")
+@Table(name = "tb_funcionario")
 public class Worker implements Serializable {
 
 	/**
@@ -18,11 +18,10 @@ public class Worker implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String Nome;
+	private String nome;
 	private Double salario;
 
 	public Worker() {
@@ -32,7 +31,7 @@ public class Worker implements Serializable {
 	public Worker(Long id, String nome, Double salario) {
 		super();
 		this.id = id;
-		Nome = nome;
+		this.nome = nome;
 		this.salario = salario;
 	}
 
@@ -45,11 +44,11 @@ public class Worker implements Serializable {
 	}
 
 	public String getNome() {
-		return Nome;
+		return nome;
 	}
 
 	public void setNome(String nome) {
-		Nome = nome;
+		this.nome = nome;
 	}
 
 	public Double getSalario() {
@@ -62,7 +61,7 @@ public class Worker implements Serializable {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(Nome, id, salario);
+		return Objects.hash(nome, id, salario);
 	}
 
 	@Override
@@ -74,10 +73,8 @@ public class Worker implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Worker other = (Worker) obj;
-		return Objects.equals(Nome, other.Nome) && Objects.equals(id, other.id)
+		return Objects.equals(nome, other.nome) && Objects.equals(id, other.id)
 				&& Objects.equals(salario, other.salario);
 	}
-	
-	
 
 }

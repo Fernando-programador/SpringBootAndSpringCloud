@@ -44,4 +44,6 @@
     <fullyQualifiedTypeName name="com.microServices.FeignClient.WorkerFeingClient"/>
     <fullyQualifiedTypeName name="com.microServices.Servico.Worker"/>
     <fullyQualifiedTypeName name="org.springframework.cloud.loadbalancer.annotation.LoadBalancerClient"/>
+    <fullyQualifiedTypeName name="org.springframework.cloud.netflix.eureka.server.EnableEurekaServer"/>
+    <fullyQualifiedTypeName name="org.springframework.cloud.netflix.eureka.EnableEurekaClient"/>
 </qualifiedTypeNameHistroy>

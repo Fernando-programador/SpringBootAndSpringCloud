@@ -1,6 +1,6 @@
 package com.microServices.FeignClient;
 
-import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClient;
+
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
@@ -13,8 +13,7 @@ import com.microServices.Servico.Worker;
 //@FeignClient(name = "hr-worker",url = "localhost:8005", path = "/service")
 //componente gerenciado pelo spring
 @Component 
-
-@FeignClient(name = "hr-worker", path = "/service")
+@FeignClient(name = "hr-funcionario", path = "/pagamento")
 public interface WorkerFeingClient {
 
 	//copiei do hr-funcionario com.microService.Recurso

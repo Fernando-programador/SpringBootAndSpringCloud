@@ -12,7 +12,7 @@ import com.microServices.Entities.Pagamento;
 import com.microServices.Servico.PagamentoService;
 
 @RestController
-@RequestMapping(value = "/service")
+@RequestMapping(value = "/pagamento")
 public class PagamentoResource {
 
 	@Autowired

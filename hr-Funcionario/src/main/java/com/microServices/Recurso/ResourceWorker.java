@@ -18,16 +18,13 @@ import com.microServices.Entity.Repositorio.RepositoryWorker;
 
 
 @RestController
-@RequestMapping(value = "/service")
+@RequestMapping(value = "/pagamento")
 public class ResourceWorker {
 	
 	private static Logger logger = LoggerFactory.getLogger(ResourceWorker.class);
+	
 	@Autowired
 	private Environment env;
-	
-	
-	
-	
 	
 	@Autowired
 	private RepositoryWorker repository;
