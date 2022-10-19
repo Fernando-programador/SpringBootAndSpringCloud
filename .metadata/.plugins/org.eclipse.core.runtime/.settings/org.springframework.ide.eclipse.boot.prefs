@@ -3,6 +3,7 @@ org.springframework.ide.eclipse.boot.wizard.PopularityTracker.cloud-eureka=5
 org.springframework.ide.eclipse.boot.wizard.PopularityTracker.cloud-eureka-server=1
 org.springframework.ide.eclipse.boot.wizard.PopularityTracker.cloud-feign=5
 org.springframework.ide.eclipse.boot.wizard.PopularityTracker.cloud-loadbalancer=2
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.cloud-resilience4j=1
 org.springframework.ide.eclipse.boot.wizard.PopularityTracker.data-jpa=3
 org.springframework.ide.eclipse.boot.wizard.PopularityTracker.devtools=5
 org.springframework.ide.eclipse.boot.wizard.PopularityTracker.h2=3
