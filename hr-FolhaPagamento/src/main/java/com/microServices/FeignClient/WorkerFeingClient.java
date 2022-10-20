@@ -13,7 +13,7 @@ import com.microServices.Servico.Worker;
 //@FeignClient(name = "hr-worker",url = "localhost:8005", path = "/service")
 //componente gerenciado pelo spring
 @Component 
-@FeignClient(name = "hr-funcionario", path = "/pagamento")
+@FeignClient(name = "hr-funcionario", path = "/funcionario")
 public interface WorkerFeingClient {
 
 	//copiei do hr-funcionario com.microService.Recurso

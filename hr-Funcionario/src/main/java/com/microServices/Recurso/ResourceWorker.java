@@ -18,7 +18,7 @@ import com.microServices.Entity.Repositorio.RepositoryWorker;
 
 
 @RestController
-@RequestMapping(value = "/pagamento")
+@RequestMapping(value = "/funcionario")
 public class ResourceWorker {
 	
 	private static Logger logger = LoggerFactory.getLogger(ResourceWorker.class);
