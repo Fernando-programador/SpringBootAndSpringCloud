@@ -5,6 +5,8 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.core.env.Environment;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,34 +17,43 @@ import org.springframework.web.bind.annotation.RestController;
 import com.microServices.Entity.Worker;
 import com.microServices.Entity.Repositorio.RepositoryWorker;
 
-
-
+@RefreshScope
 @RestController
 @RequestMapping(value = "/funcionario")
 public class ResourceWorker {
-	
+
 	private static Logger logger = LoggerFactory.getLogger(ResourceWorker.class);
-	
+
 	@Autowired
 	private Environment env;
-	
+
 	@Autowired
 	private RepositoryWorker repository;
 	
+	
+	@Value("{test.config}")
+	private String testConfig;
+
+	@GetMapping(value = "/configs")
+	public ResponseEntity<Void> getConfigs() {
+		logger.info("CONFIG = " + testConfig);
+		
+		return ResponseEntity.noContent().build();
+	}
+
 	@GetMapping
-	public ResponseEntity<List<Worker>> findAll(){
+	public ResponseEntity<List<Worker>> findAll() {
 		List<Worker> list = repository.findAll();
 		return ResponseEntity.ok(list);
 	}
-	
+
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<Worker> findByid(@PathVariable Long id) {
-		
+
 		logger.info("PORT = " + env.getProperty(" local.server.port"));
-		
+
 		Worker obj = repository.findById(id).get();
 		return ResponseEntity.ok(obj);
 	}
-	
-	
+
 }
