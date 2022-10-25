@@ -25,6 +25,7 @@ public class HrConfigServerApplication implements CommandLineRunner{
 	 * para tesatar se o modo private do github esta funcionando implementei o commmandlineruune na clase
 	 * criei o metodo a baixo
 	 * coloque o value acima
+	 * meu github não funciona pois tenho a senha de dois fatores
 	 */
 	@Override
 	public void run(String... args) throws Exception {

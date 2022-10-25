@@ -9,7 +9,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 //@RibbonClient(name = "hr-worker") // de quem ele é cliente?
 
 
-@EnableCircuitBreaker
+//@EnableCircuitBreaker
 @SpringBootApplication
 @EnableFeignClients
 @EnableEurekaClient
