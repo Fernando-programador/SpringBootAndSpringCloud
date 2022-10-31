@@ -59,22 +59,7 @@ public class Worker implements Serializable {
 		this.salario = salario;
 	}
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(nome, id, salario);
-	}
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Worker other = (Worker) obj;
-		return Objects.equals(nome, other.nome) && Objects.equals(id, other.id)
-				&& Objects.equals(salario, other.salario);
-	}
+
 
 }
