@@ -20,17 +20,16 @@ public class RecursoUsuario {
 	@Autowired
 	private UsuarioRepositorio repository;
 
-	@GetMapping(value = "/2")
-	public ResponseEntity<Usuario> findbyid(@PathVariable Long id){
+	@GetMapping(value = "/{id}")
+	public ResponseEntity<Usuario> findbyid(@PathVariable ("id") Long id){
 		Usuario obj = repository.findById(id).get();
 		return ResponseEntity.ok(obj);
-	
 	}
 	
 	@GetMapping(value = "/3")
 	public String teste(){
 		
-		return "Tsando";
+		return "testando a conexão";
 	
 	}
 
